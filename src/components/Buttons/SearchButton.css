@@ -1,0 +1,37 @@
+.search-button {
+  position: relative;
+  top: 17px;
+  margin-right: 12%;
+  width: 127px;
+  height: 48px;
+  background-color: #eb5757fa;
+  border: none;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-button i {
+  color: #fff;
+}
+
+.search-button span {
+  color: #fff;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .search-button {
+      width: 100px;
+      height: 40px;
+      margin-right: 5%;
+      font-size: 14px;
+      border-radius: 12px;
+  }
+  
+  .search-button span {
+      padding: 8px;
+  }
+}

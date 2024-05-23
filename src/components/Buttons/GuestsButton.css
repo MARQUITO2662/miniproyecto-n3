@@ -1,0 +1,83 @@
+ .guests-button-add {
+   position: relative;
+   top: 15px;
+   width: 300%;
+   height: 50px;
+   background-color: #fff;
+   border: 1px solid #8b8b8b;
+   border-radius: 16px;
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+   margin-left: 1px;
+ }
+
+ .guests-button-add.active {
+   box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+ }
+
+ .guests-button-add strong {
+   margin: 3px;
+   font-weight: 700;
+   font-size: 12px;
+ }
+
+ .guests-button-add span {
+   margin: 3px;
+   font-weight: 500;
+   font-size: 14px;
+ }
+
+ .guests-content {
+   margin-top: 40px;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .guests-counter {
+   font-size: 24px;
+   font-weight: 700;
+ }
+
+
+ /* Estilos para los botones de incremento y decremento */
+ .guests-content button {
+   width: 35px;
+   background-color: #fff;
+   border: 1px solid #fafafa;
+   border-radius: 8px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   font-size: 18px;
+ }
+
+ .guests-content button:hover {
+   background-color: #f2f2f2;
+ }
+
+ /* Estilos para los botones de incremento y decremento cuando están deshabilitados */
+ .guests-content button:disabled {
+   background-color: #f2f2f2;
+   cursor: not-allowed;
+ }
+
+ .contain-add-remove {
+   display: flex;
+ }
+
+ .contain-add-remove span {
+   margin: 0 10px;
+   font-size: 18px;
+ }
+
+ .contain-add-remove img {
+   width: 100px;
+ }
+
+ .guests-description {
+   color: hsl(0, 0%, 74%);
+   font-size: 15px;
+   font-weight: 400;
+ }

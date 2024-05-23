@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0rem 10%;
+    gap: 2.5rem;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+button{
+    font-family: 'Mulish', sans-serif;
+}
+
+li{
+    font-family: 'Mulish', sans-serif;
+}
+
+p{
+    font-family: 'Mulish', sans-serif;
+}
