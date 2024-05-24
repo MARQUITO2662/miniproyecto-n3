@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
+// App.js
+import React, { useState, useEffect } from "react";
 import { Card } from "./components/Card";
 import { Nav } from "./components/Nav";
 
 function App() {
   const [data, setData] = useState([]);
-  const [selectedLocation, setSelectedLocation] = useState("Helsinki, Finland");
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
-      const rs = await fetch('stays.json');
-      const rsJson = await rs.json();
-      setData(rsJson);
+      const response = await fetch('stays.json');
+      const jsonData = await response.json();
+      setData(jsonData);
+      setFilteredData(jsonData); // Inicialmente, mostrar todos los datos
     };
 
     getData();
@@ -18,23 +20,26 @@ function App() {
 
   return (
     <>
-     <Nav />
+      <Nav data={data} setFilteredData={setFilteredData} />
       <div className='container'>
-        {data.map((e, index) => (
-      <Card
-            key={index}
-            superHost={e.superHost}
-            title={e.title}
-            rating={e.rating}
-            type={e.type}
-            beds={e.beds}
-            photo={e.photo}
-          />
-        ))}
+        {filteredData.length > 0 ? (
+          filteredData.map((item, index) => (
+            <Card
+              key={index}
+              superHost={item.superHost}
+              title={item.title}
+              rating={item.rating}
+              type={item.type}
+              beds={item.beds}
+              photo={item.photo}
+            />
+          ))
+        ) : (
+          <p>No se encontraron resultados</p>
+        )}
       </div>
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;
